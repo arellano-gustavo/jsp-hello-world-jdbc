@@ -21,7 +21,7 @@ public class HelloInfo {
             error = "ERROR: failed to load HSQLDB JDBC driver.";
         }
         try {
-            this.c = DriverManager.getConnection("jdbc:mysql://13.56.211.236:3306/goose?autoReconnect=true", "oscar", "oscar");
+            this.c = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/goose?autoReconnect=true", "usuario", "clave");
             Statement stmt = c.createStatement();
             stmt.execute("CREATE TABLE PERSON(id int primary key, user varchar(255), password varchar(255))");
             stmt.execute("INSERT INTO PERSON(id, user, password) VALUES(1, 'Anju', 'Anju')");
